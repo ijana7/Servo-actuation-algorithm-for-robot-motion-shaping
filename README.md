@@ -39,24 +39,24 @@ Here is the Arduino code that controls the walking motion:
 ```cpp
 #include <Servo.h>
 
-// Define servo objects
+
 Servo hipServo1, kneeServo1; // Front left leg
 Servo hipServo2, kneeServo2; // Front right leg
 Servo hipServo3, kneeServo3; // Back left leg
 Servo hipServo4, kneeServo4; // Back right leg
 
-// Define servo pins
+
 const int hipPin1 = 2, kneePin1 = 3;
 const int hipPin2 = 4, kneePin2 = 5;
 const int hipPin3 = 6, kneePin3 = 7;
 const int hipPin4 = 8, kneePin4 = 9;
 
-// Initial angles
+
 int initialHipAngle = 90;
 int initialKneeAngle = 90;
 
 void setup() {
-  // Attach servos to pins
+  
   hipServo1.attach(hipPin1);
   kneeServo1.attach(kneePin1);
   hipServo2.attach(hipPin2);
@@ -66,7 +66,6 @@ void setup() {
   hipServo4.attach(hipPin4);
   kneeServo4.attach(kneePin4);
 
-  // Set initial angles
   hipServo1.write(initialHipAngle);
   kneeServo1.write(initialKneeAngle);
   hipServo2.write(initialHipAngle);
@@ -83,17 +82,16 @@ void loop() {
   hipServo2.write(70);
   delay(500);
   
-  // Move back legs forward
   hipServo3.write(70);
   hipServo4.write(70);
   delay(500);
   
-  // Move front legs back to initial position
+  
   hipServo1.write(110);
   hipServo2.write(110);
   delay(500);
   
-  // Move back legs back to initial position
+
   hipServo3.write(110);
   hipServo4.write(110);
   delay(500);
