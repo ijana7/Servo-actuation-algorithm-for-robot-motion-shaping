@@ -40,10 +40,10 @@ Here is the Arduino code that controls the walking motion:
 #include <Servo.h>
 
 
-Servo hipServo1, kneeServo1; // Front left leg
-Servo hipServo2, kneeServo2; // Front right leg
-Servo hipServo3, kneeServo3; // Back left leg
-Servo hipServo4, kneeServo4; // Back right leg
+Servo hipServo1, kneeServo1; 
+Servo hipServo2, kneeServo2; 
+Servo hipServo3, kneeServo3; 
+Servo hipServo4, kneeServo4; 
 
 
 const int hipPin1 = 2, kneePin1 = 3;
