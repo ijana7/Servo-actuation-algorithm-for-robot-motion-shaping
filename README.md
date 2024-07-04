@@ -36,66 +36,7 @@ The algorithm is implemented in an Arduino sketch (`robot_walking.ino`). The cod
 
 Here is the Arduino code that controls the walking motion:
 
-```cpp
-#include <Servo.h>
-
-
-Servo hipServo1, kneeServo1; 
-Servo hipServo2, kneeServo2; 
-Servo hipServo3, kneeServo3; 
-Servo hipServo4, kneeServo4; 
-
-
-const int hipPin1 = 2, kneePin1 = 3;
-const int hipPin2 = 4, kneePin2 = 5;
-const int hipPin3 = 6, kneePin3 = 7;
-const int hipPin4 = 8, kneePin4 = 9;
-
-
-int initialHipAngle = 90;
-int initialKneeAngle = 90;
-
-void setup() {
-  
-  hipServo1.attach(hipPin1);
-  kneeServo1.attach(kneePin1);
-  hipServo2.attach(hipPin2);
-  kneeServo2.attach(kneePin2);
-  hipServo3.attach(hipPin3);
-  kneeServo3.attach(kneePin3);
-  hipServo4.attach(hipPin4);
-  kneeServo4.attach(kneePin4);
-
-  hipServo1.write(initialHipAngle);
-  kneeServo1.write(initialKneeAngle);
-  hipServo2.write(initialHipAngle);
-  kneeServo2.write(initialKneeAngle);
-  hipServo3.write(initialHipAngle);
-  kneeServo3.write(initialKneeAngle);
-  hipServo4.write(initialHipAngle);
-  kneeServo4.write(initialKneeAngle);
-}
-
-void loop() {
-  // Move front legs forward
-  hipServo1.write(70);
-  hipServo2.write(70);
-  delay(500);
-  
-  hipServo3.write(70);
-  hipServo4.write(70);
-  delay(500);
-  
-  
-  hipServo1.write(110);
-  hipServo2.write(110);
-  delay(500);
-  
-
-  hipServo3.write(110);
-  hipServo4.write(110);
-  delay(500);
-}
+`
 ### How to Use
 
 1. **Clone the Repository:**
