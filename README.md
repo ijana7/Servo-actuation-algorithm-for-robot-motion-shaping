@@ -8,14 +8,17 @@ The script defines the servo motor positions for the right and left legs, and th
 right_leg_motors = [servo_right_thigh, servo_right_knee, servo_right_ankle]
 left_leg_motors = [servo_left_thigh, servo_left_knee, servo_left_ankle]
 
-for motor in right_leg_motors:
-    motor.angle = 90
-for motor in left_leg_motors:
-    motor.angle = 90
+
+for motor in right_leg_motors:motor.angle = 90
+
+for motor in left_leg_motors:motor.angle = 90
 
 right_leg_motors[0].angle = 120
+
 right_leg_motors[1].angle = 60
+
 right_leg_motors[2].angle = 120
+
 
 left_leg_motors[0].angle = 60
 left_leg_motors[1].angle = 120
@@ -23,10 +26,9 @@ left_leg_motors[2].angle = 60
 
 time.sleep(1)
 
-for motor in right_leg_motors:
-    motor.angle = 90
-for motor in left_leg_motors:
-    motor.angle = 90
+for motor in right_leg_motors: motor.angle = 90
+
+for motor in left_leg_motors: motor.angle = 90
 
 ## explanation
 `right_leg_motors`: containing 3 motors for the right leg.
