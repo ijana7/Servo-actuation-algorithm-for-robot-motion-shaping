@@ -35,7 +35,49 @@ The algorithm is implemented in an Arduino sketch (`robot_walking.ino`). The cod
 ### Code Explanation
 
 Here is the Arduino code that controls the walking motion:
+#include <Servo.h>
 
+Servo hipServo1, hipServo2, hipServo3, kneeServo, ankleServo1, ankleServo2;
+
+const int hipPin1 = 2, hipPin2 = 4, hipPin3 = 6, kneePin = 8, anklePin1 = 10, anklePin2 = 12;
+
+int initialHipAngle = 90;
+int initialKneeAngle = 90;
+int initialAnkleAngle = 90;
+
+void setup() {
+  hipServo1.attach(hipPin1);
+  hipServo2.attach(hipPin2);
+  hipServo3.attach(hipPin3);
+  kneeServo.attach(kneePin);
+  ankleServo1.attach(anklePin1);
+  ankleServo2.attach(anklePin2);
+
+  hipServo1.write(initialHipAngle);
+  hipServo2.write(initialHipAngle);
+  hipServo3.write(initialHipAngle);
+  kneeServo.write(initialKneeAngle);
+  ankleServo1.write(initialAnkleAngle);
+  ankleServo2.write(initialAnkleAngle);
+}
+
+void loop() {
+  hipServo1.write(70);
+  hipServo2.write(70);
+  hipServo3.write(70);
+  kneeServo.write(110);
+  ankleServo1.write(110);
+  ankleServo2.write(110);
+  delay(500);
+
+  hipServo1.write(110);
+  hipServo2.write(110);
+  hipServo3.write(110);
+  kneeServo.write(90);
+  ankleServo1.write(90);
+  ankleServo2.write(90);
+  delay(500);
+}
 `
 ### How to Use
 
