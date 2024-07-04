@@ -30,15 +30,17 @@ for motor in left_leg_motors:
 
 ## explanation
 `right_leg_motors`: containing 3 motors for the right leg.
+
  `left_leg_motors`: containing 3 motors for the left leg.
+ 
  First, a loop sets the angle of each motor in both lists to 90 degrees.
 
- ## right leg
+ right leg
 The first motor in the right leg is set to 120 degrees.
 The second motor in the right leg is set to 60 degrees.
 The third motor in the right leg is set to 120 degrees.
 
-## left leg 
+left leg 
 The first motor in the left leg is set to 60 degrees.
 The second motor in the left leg is set to 120 degrees.
 The third motor in the left leg is set to 60 degrees.
